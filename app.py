@@ -1,5 +1,9 @@
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
+CURR_DIR = os.path.dirname(os.path.abspath(__file__))
+SRC_DIR = os.path.join(CURR_DIR, "src")
+if os.path.exists(SRC_DIR) and SRC_DIR not in sys.path:
+    sys.path.insert(0, SRC_DIR)
+print("SRC_DIR added to sys.path:", SRC_DIR)
 
 import streamlit as st
 import numpy as np
