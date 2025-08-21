@@ -1,9 +1,13 @@
 import sys, os
-sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
+
 import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+from astrocycle.pipeline import run_pipeline
+from astrocycle.spectrum import bandpass_hilbert
 
 # Ensure 'src' is on path so we can import astrocycle without installation
 CURR_DIR = os.path.dirname(os.path.abspath(__file__))
