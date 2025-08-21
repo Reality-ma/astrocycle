@@ -1,5 +1,5 @@
-
-import os, sys
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 import streamlit as st
 import numpy as np
 import pandas as pd
